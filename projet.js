@@ -167,7 +167,7 @@
                     fils[i].addEventListener("mouseenter", enter);
                     fils[i].addEventListener("mouseout", out);
                 }
-                i = figureCreation.nbErreurs;
+                i = objetJson.nbErreurs;
                 while (i) {
                     el = myRandom.range(0, fils.length - 1);
                     if (!fils[el].erreur) {
