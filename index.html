@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+</html>
+<head>
+    <meta charset="UTF-8">
+    <title>Jeux des differences</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/flatly/bootstrap.min.css">
+    <link rel="stylesheet" href="projet.css">
+    <script>
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div><span id="timer"></span></div>
+    <div class="container">
+        <div class="row" id="form">
+            <div class="col-md-6">
+                <div class="col-md-3">&nbsp;</div>
+                <form action="" class="form-group" id="forme">
+                    <h1>Projet dev en javascript</h1>
+                    <label for="Longeur">Lageur</label>
+                    <input type="text" onkeypress="return isNumberKey(event)" class="form-control" value="300"
+                        id="largeur" placeholder="Entre la Lageur">
+                    <label for="Hauteur">Hauteur</label>
+                    <input type="text" onkeypress="return isNumberKey(event)" class="form-control" value="300"
+                        id="hauteur" placeholder="Entre la hauteur">
+                    <label for="exampleInputEmail1">Nbre Erreur</label>
+                    <input type="text" onkeypress="return isNumberKey(event)" class="form-control" value="2"
+                        id="nbErreurs" placeholder="Entre le nombre d'erreur">
+                    <label for="exampleInputEmail1">Nbre Figure</label>
+                    <input type="text" onkeypress="return isNumberKey(event)" class="form-control" value="4"
+                        id="nbFigure" placeholder="Entre le nombre">
+                    <label for="exampleInputEmail1">Temps</label>
+                    <input type="text" onkeypress="return isNumberKey(event)" class="form-control" value="10"
+                        id="temps">
+                    <button type="" id="jouer" class="btn btn-primary mt-3">Jouer</button>
+                </form>
+              
+            </div>
+        </div>
+        
+        <div class="col-md-12" id="mesclones">
+            <div class="col-md-6" id="image"></div>
+            <div class="col-md-6" id="image-clone"></div>
+        </div>
+    </div>
+    <script src="projet.js"></script>
+</body>
+</html>

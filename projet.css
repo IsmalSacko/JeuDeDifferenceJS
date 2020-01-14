@@ -1,0 +1,28 @@
+.nepaAficher{
+    display: none;
+}
+
+#mesclones{
+    display: flex;
+}
+
+#image, #image-clone{
+    text-align: center;
+    background-color:bisque;
+    border: 2px solid lightgrey;  
+    margin: 6px; 
+    margin-top: 67px;
+    border-radius: 4%;
+
+}
+body{
+    background-color:cadetblue; 
+    
+}
+h1{
+    color:antiquewhite;
+   
+    
+}
+
+
