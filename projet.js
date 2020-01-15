@@ -35,6 +35,7 @@
                 document.getElementById('timer').style.marginLeft='30%';
                 
                 }else{
+                    // à revoir ici 
                 tempsCourant.innerHTML = 'Il vous reste'+ counter+msgapres;
                 document.getElementById('timer').style.backgroundColor='lightgrey';
                 document.getElementById('timer').style.marginLeft='30%';
@@ -150,12 +151,12 @@
             obj.nbErreurs = 1;
             obj.figures = [];
             obj.figures.push({ forme: '<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />' }, { forme: '<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />' });
-            function createSVG(objetJson) {
+            function createSVG(figureCreation) {
                 svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-                svg.setAttribute('width', objetJson.width);
-                svg.setAttribute('height', objetJson.height);
-                for (i = 0; i < objetJson.figures.length; i++) {
-                    svg.innerHTML += objetJson.figures[i].forme;
+                svg.setAttribute('width', figureCreation.width);
+                svg.setAttribute('height', figureCreation.height);
+                for (i = 0; i < figureCreation.figures.length; i++) {
+                    svg.innerHTML += figureCreation.figures[i].forme;
                 }
                 document.getElementById('image').innerHTML = "";
                 document.getElementById('image').appendChild(svg);
@@ -167,7 +168,7 @@
                     fils[i].addEventListener("mouseenter", enter);
                     fils[i].addEventListener("mouseout", out);
                 }
-                i = objetJson.nbErreurs;
+                i = figureCreation.nbErreurs;
                 while (i) {
                     el = myRandom.range(0, fils.length - 1);
                     if (!fils[el].erreur) {
